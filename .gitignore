@@ -1,0 +1,15 @@
+# Python environment
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Data downloaded or generated locally
+data/raw/
+data/processed/
+
+# Temporary files
+*.tmp
+.DS_Store
+Thumbs.db
