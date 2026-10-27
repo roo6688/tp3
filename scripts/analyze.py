@@ -71,11 +71,11 @@ def main():
     for i, table in enumerate(curves):
         ax.plot(table["time_h"], table["delta_voltage_mV"],
                 label=table["battery"].iloc[0], color=colors[i % len(colors)], lw=1.7)
-    ax.set(xlabel="Temps de repos (h)", ylabel="Variation de tension V(t) − V(0) (mV)",
-           title="Relaxation de la tension après charge complète", xlim=(0, 24))
+    ax.set(xlabel="Rest time (h)", ylabel="Voltage change V(t) − V(0) (mV)",
+           title="Voltage relaxation after a full charge", xlim=(0, 24))
     ax.axhline(0, color="black", lw=0.7)
     ax.grid(alpha=0.25)
-    ax.legend(title="Batterie", ncol=2)
+    ax.legend(title="Battery", ncol=2)
     fig.savefig(FIGURES / "ocv_relaxation_curves.png", dpi=200)
     plt.close(fig)
 
@@ -83,8 +83,8 @@ def main():
     bars = ax.bar(summary["battery"], summary["delta_V_0_24h_mV"],
                   color=[colors[i % len(colors)] for i in range(len(summary))])
     ax.bar_label(bars, fmt="%.1f", padding=4, fontsize=9)
-    ax.set(xlabel="Batterie", ylabel="Variation de tension V(24 h) − V(0) (mV)",
-           title="Variation totale après 24 heures de repos — après charge complète")
+    ax.set(xlabel="Battery", ylabel="Voltage change V(24 h) − V(0) (mV)",
+           title="Voltage change after 24 hours of rest following a full charge")
     ax.axhline(0, color="black", lw=0.7)
     ax.grid(axis="y", alpha=0.25)
     ax.set_axisbelow(True)
