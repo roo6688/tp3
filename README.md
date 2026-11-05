@@ -93,13 +93,13 @@ tp3/
 
 ## Requirements
 
-- [x] The repository contains a `requirements.txt` listing all Python dependencies.
+- [x] The repository contains a `requirements.txt` listing all Python dependencies. 
 - Python 3.11.8
   - `pandas` 2.2.3
   - `numpy` 2.4.6
   - `matplotlib` 3.11.2
-  
-Install the dependencies with `pip install -r requirements.txt`.
+
+- Steps for installing these dependencies are included in the [instructions to replicators](#instructions-to-replicators).
 
 ## Instructions to Replicators
 
