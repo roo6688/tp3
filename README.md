@@ -108,28 +108,81 @@ tp3/
    `git clone https://github.com/roo6688/tp3.git`
 
    `cd tp3`
-2. Create the environment:
+2. Install the required Python version, if applicable
 
-   Windows PowerShell: `python -m venv .venv`, then `.\.venv\Scripts\python.exe -m pip install -r requirements.txt`.
+   [uv](https://docs.astral.sh/uv/) allows to install multiple versions of Python. We suggest using uv to install the required Python version. 
+
+   2.1 Install uv:
+
+      Windows PowerShell: `powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"`
+
+      macOS/Linux: `curl -LsSf https://astral.sh/uv/install.sh | sh`
+      
+   2.2 Restart any open terminals and/or VSCode to ensure the uv installation directory is added to PATH.
    
-   macOS/Linux: `python3 -m venv .venv`, then `.venv/bin/python -m pip install -r requirements.txt`.
+   2.3  Check whether uv is installed correctly by verifying the installed version
+
+      `uv --version`
+      
+      If a version appears, uv is correctly installed.  
    
-3. Download the data:
+   2.4 If the command above reports that uv is not recognized or cannot be found, permanently add the uv installation directory to your PATH.
+
+      Windows PowerShell: `[Environment]::SetEnvironmentVariable("Path", "$env:USERPROFILE\.local\bin;$([Environment]::GetEnvironmentVariable('Path', 'User'))", "User")`, then open a new PowerShell window
+
+      macOS/Linux, Zsh shell: `echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc`, then `source ~/.zshrc`
+      
+      macOS/Linux, Bash shell: `echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc`, then `source ~/.bashrc`
+
+      Repeat step 2.3 to verify if uv is installed correctly. If 2.3 still fails, refer to the Python Developer Tooling Handbook by Tim Hopper for further troubleshooting for [Windows](https://pydevtools.com/handbook/how-to/how-to-install-uv-on-windows/#uv-not-recognized-after-installing) or [macOS](https://pydevtools.com/handbook/how-to/how-to-install-uv-on-macos/#troubleshooting) or [Linux](https://pydevtools.com/handbook/how-to/how-to-install-uv-on-linux/#troubleshooting). 
+      
+      
+   2.5 Install the required Python version with uv
+      
+      `uv python install 3.11.8`
+
+3. Create the environment:
+   
+   3.1 If your default Python version is the one required (3.11.8), use the following:
+
+      Windows PowerShell: `python -m venv .venv`
+   
+      macOS/Linux: `python3 -m venv .venv`
+
+   3.2 If you added Python 3.11.8 with uv, use the following:
+   
+      `uv run --python 3.11.8 python -m venv .venv` 
+
+   3.3 Check whether the virtual environment has the correct Python version:
+
+      Windows PowerShell: `.\.venv\Scripts\python.exe --version`
+   
+      macOS/Linux: `./.venv/bin/python --version`
+
+      Output should be: Python 3.11.8
+
+4. Install the dependencies 
+
+   Windows PowerShell: `.\.venv\Scripts\python.exe -m pip install -r requirements.txt`
+   
+   macOS/Linux: `.venv/bin/python -m pip install -r requirements.txt`
+
+5. Download the data:
 
    `.\.venv\Scripts\python.exe scripts/download_data.py`
-4. Preprocess: 
+6. Preprocess: 
    
    `.\.venv\Scripts\python.exe scripts/preprocess.py`
    
    Expected message: Traitement terminé : 8 batteries, 11528 observations.
-5. Analyze: 
+7. Analyze: 
 
    `.\.venv\Scripts\python.exe scripts/analyze.py`
    
    Expected message: Analyse terminée : 8 batteries.
-6. Find the outputs in `data/processed/`, `results/` and `figures/`.
+8. Find the outputs in `data/processed/`, `results/` and `figures/`.
 
-Run the scripts in this order. If `data/raw/` already contains the files, skip step 3.
+Run the scripts in this order. If `data/raw/` already contains the files, skip step 5.
 
 ## Files downloaded and produced
 
