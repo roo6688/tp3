@@ -3,7 +3,7 @@ Title: Reproducible analysis of OCV relaxation after a full charge
 Contributors:
   - Nasma Drissi
   - Ronald Sim
-Version: 1.0
+Version: 1.0.0
 ---
 
 ## Overview
