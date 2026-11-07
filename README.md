@@ -208,6 +208,20 @@ Scripts determine paths from their own location, so they must stay in `scripts/`
 
 The code is licensed under the MIT license. See the `LICENSE` file for details.
 
+
+## How to cite this project
+
+When citing this project, please include the following information:
+- Contributor names: Nasma Drissi and Ronald Sim;
+- Repository title: tp3;
+- Year of last repository update;
+- Version number (if available), release tag (if available), or last commit number;
+- Repository url: https://github.com/roo6688/tp3.
+
+For example, using IEEE format: N. Drissi, R. Sim, "tp3", GitHub repository, Version 1.0, 2026 [Online]. Available: https://github.com/roo6688/tp3.
+
+This section is based on the structure given by Terry Williams via Essay Reply, published September 7 2026: https://essayreply.com/citation/how-to-cite-github/. Please refer to the post for citation examples in APA (7th ed.), MLA (9th ed.), and Chicago (17th ed.).
+
 ## References
 
 Iulian-Teodor Voicila, Bogdan-Adrian Enache, Irina Vilciu, George-Calin Seritan, "24-hour raw OCV relaxation dataset for rechargeable batteries with different chemistries", IEEE Dataport, May 22, 2026, doi:10.21227/651q-8v82
