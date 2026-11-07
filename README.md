@@ -232,3 +232,12 @@ Voicila, Teodor-Iulian; Enache, Bogdan-Adrian; Argyriou, Vasilis; Sarigiannidis,
 ## Acknowledgements
 
 Structure adapted from the [social science data editors' README template](https://social-science-data-editors.github.io/template_README/).
+
+## Support
+If you need any support or if you have other questions related to the project, please submit an [issue](https://github.com/roo6688/tp3/issues/) for others to benefit from the administrators' answer. Please include as much information as possible in the description of the issue.
+
+If no response is given within 48 hours, please send an email to the administrators, Nasma Drissi (nasma.drissi@etud.polymtl.ca) and Ronald Sim (ronald.sim@etud.polymtl.ca). 
+
+Your issue and/or email must follow this project's [Code of Conduct](./CODE_OF_CONDUCT.md).
+
+Guidelines for reporting a problem are given in the [contributions file](./CONTRIBUTING.md).
